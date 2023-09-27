@@ -1,23 +1,25 @@
 <?php
 
-class Bintang
-{
-  var $bintang;
+echo "<title>Praktikum Perulangan</title>";
 
-  public function setTinggiBintang($bintang)
+class Perulangan
+{
+  var $t;
+
+  public function setTinggi($t)
   {
-    $this->bintang = $bintang;
+    $this->t = $t;
   }
 
-  public function getTinggiBintang()
+  public function getTinggi()
   {
-    return $this->bintang;
+    return $this->t;
   }
 
   public function cetakSegitigaSamaKaki()
   {
-    for ($i = 0; $i <= $this->bintang; $i++) {
-      for ($j = $this->bintang; $j > $i; $j--) {
+    for ($i = 0; $i <= $this->t; $i++) {
+      for ($j = $this->t; $j > $i; $j--) {
         echo "&nbsp;&nbsp;";
       }
       for ($k = 1; $k < $i; $k++) {
@@ -30,14 +32,14 @@ class Bintang
 
   public function cetakSegitigaKanan()
   {
-    for ($i = 0; $i < $this->bintang; $i++) {
+    for ($i = 0; $i < $this->t; $i++) {
       for ($j = 0; $j < $i; $j++) {
         echo "*";
       }
       echo "<br>";
     }
 
-    for ($i = $this->bintang - 1; $i >= 1; $i--) {
+    for ($i = $this->t - 1; $i >= 1; $i--) {
       for ($j = 1; $j <= $i; $j++) {
         echo "*";
       }
@@ -47,8 +49,8 @@ class Bintang
 
   public function cetakSegitigaKiri()
   {
-    for ($i = 0; $i < $this->bintang; $i++) {
-      for ($j = $this->bintang; $j > $i; $j--) {
+    for ($i = 0; $i < $this->t; $i++) {
+      for ($j = $this->t; $j > $i; $j--) {
         echo "&nbsp;&nbsp;";
       }
       for ($k = 1; $k <= $i; $k++) {
@@ -57,8 +59,8 @@ class Bintang
       echo "<br>";
     }
 
-    for ($i = $this->bintang - 1; $i >= 1; $i--) {
-      for ($j = $this->bintang; $j > $i; $j--) {
+    for ($i = $this->t - 1; $i >= 1; $i--) {
+      for ($j = $this->t; $j > $i; $j--) {
         echo "&nbsp;&nbsp;";
       }
       for ($k = 1; $k <= $i; $k++) {
@@ -69,20 +71,20 @@ class Bintang
   }
 }
 
-$segitiga1 = new Bintang();
-$segitiga1->setTinggiBintang(6);
+$segitiga1 = new Perulangan;
+$segitiga1->setTinggi(6);
 echo "<br>Segitiga Kiri:<br>";
 $segitiga1->cetakSegitigaSamaKaki();
 
 
 
-$segitiga2 = new Bintang();
-$segitiga2->setTinggiBintang(6);
+$segitiga2 = new Perulangan;
+$segitiga2->setTinggi(6);
 echo "Segitiga Kanan:<br>";
 $segitiga2->cetakSegitigaKanan();
 
 
-$segitiga3 = new Bintang();
-$segitiga3->setTinggiBintang(6);
+$segitiga3 = new Perulangan;
+$segitiga3->setTinggi(6);
 echo "<br>Segitiga Kiri:<br>";
 $segitiga3->cetakSegitigaKiri();
